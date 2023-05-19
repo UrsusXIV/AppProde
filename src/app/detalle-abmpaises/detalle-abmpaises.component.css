@@ -1,0 +1,65 @@
+.my-child-component {
+    background-color: #333;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .my-child-component label {
+    color: #fff;
+  }
+  
+  .my-child-component input[type="number"],
+  .my-child-component input[type="text"] {
+    background-color: #555;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 150px; /* Aumentar el tamaño de los inputs */
+  }
+  
+  .my-child-component .form-inline {
+    display: flex;
+    justify-content: center; /* Centrar los elementos */
+    gap: 30px; /* Espacio de 30px entre los elementos */
+  }
+  
+  .my-child-component .btn {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .my-child-component .btn-primary,
+  .my-child-component .btn-primary:hover,
+  .my-child-component .btn-primary:focus {
+    background-color: #0d3fac;
+    border-color: #0d3fac;
+  }
+  
+  .my-child-component .btn-success,
+  .my-child-component .btn-success:hover,
+  .my-child-component .btn-success:focus {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .my-child-component .btn-danger,
+  .my-child-component .btn-danger:hover,
+  .my-child-component .btn-danger:focus {
+    background-color: red;
+    border-color: red;
+  }
+  
+  .my-child-component .btn-warning,
+  .my-child-component .btn-warning:hover,
+  .my-child-component .btn-warning:focus {
+    background-color: orange;
+    border-color: orange;
+  }
+  
+  .my-child-component .contrast-text {
+    color: #fff; /* Color contrastado con el fondo */
+  }
+  

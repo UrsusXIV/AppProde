@@ -1,0 +1,75 @@
+/* Estilos para el modo oscuro */
+body {
+    background-color: #222; /* Color de fondo del cuerpo */
+    color: #fff; /* Color de texto */
+  }
+  
+  .container {
+    background-color: #333; /* Color de fondo del contenedor */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    margin: 0 auto; /* Agregar esta línea para centrar el contenido */
+    max-width: 100%; /* Establecer un ancho máximo para evitar que se extienda demasiado */
+  }
+  
+  h2, label {
+    color: #fff; /* Color de texto para los encabezados y etiquetas */
+  }
+  
+  .table {
+    background-color: #444; /* Color de fondo de la tabla */
+    color: #fff; /* Color de texto de la tabla */
+  }
+  
+  .btn {
+    background-color: #555; /* Color de fondo de los botones */
+    color: #fff; /* Color de texto de los botones */
+  }
+  
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #0d3fac; /* Color de fondo del botón primario */
+    border-color: #0d3fac; /* Color del borde del botón primario */
+  }
+  
+  .btn-warning{background-color: orange; border-color: orange;}
+  .btn-warning:hover,
+  .btn-warning:focus {
+    background-color: #ffc107; /* Color de fondo del botón de advertencia */
+    border-color: #ffc107; /* Color del borde del botón de advertencia */
+  }
+  
+  .btn-danger{background-color: red; border-color: red;}
+  .btn-danger:hover{background-color:lightcoral; border-color: lightcoral}
+  .btn-danger:focus {
+    background-color: #7c000c; /* Color de fondo del botón de peligro */
+    border-color: #7c000c; /* Color del borde del botón de peligro */
+  }
+  
+  .btn-success {background-color:#28a745; border-color: #28a745;}
+  .btn-success:hover{background-color: lightgreen; border-color: lightgreen;}
+  .btn-success:focus {
+    background-color: #006618; /* Color de fondo del botón de éxito */
+    border-color: #006618; /* Color del borde del botón de éxito */
+  }
+  
+  /* Ajustes adicionales */
+  .container-fluid {
+    background-color: #333; /* Color de fondo del contenedor fluido */
+  }
+  
+  .container-fluid::before,
+  .container-fluid::after {
+    background-color: #333; /* Color de fondo antes y después del contenedor fluido */
+  }
+  
+  .table tbody tr td input[type="button"] {
+    background-color: #555; /* Color de fondo del botón "Seleccionar" en la tabla */
+    color: #fff; /* Color de texto del botón "Seleccionar" en la tabla */
+    border-radius: 10%; /* Redondear los bordes del botón "Seleccionar" */
+  }
+  
+  .table tbody tr td input[type="button"]:hover,
+  .table tbody tr td input[type="button"]:focus {
+    background-color: #666; /* Color de fondo del botón "Seleccionar" en el estado hover o focus */
+  }

@@ -1,0 +1,18 @@
+<div class="container my-child-component">
+  <h3 class="text-center contrast-text">Gestion de paises</h3>
+  <div class="form-inline">
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="number" id="id" name="id" [(ngModel)]="id" class="form-control">
+    </div>
+    <div class="form-group ml-3">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" class="form-control">
+    </div>
+  </div>
+  <div class="buttons mt-3 text-center">
+    <button class="btn btn-success" (click)="aceptar()">Aceptar</button>
+    <span style="margin-left: 10px;"></span> <!-- Espacio de 10 píxeles -->
+    <button class="btn btn-danger" (click)="cancelarRetornar()">Cancelar</button>
+  </div>
+</div>
