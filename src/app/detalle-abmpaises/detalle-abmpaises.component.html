@@ -3,7 +3,7 @@
   <div class="form-inline">
     <div class="form-group">
       <label for="id">ID</label>
-      <input type="number" id="id" name="id" [(ngModel)]="id" class="form-control">
+      <input type="number" id="id" name="id" [(ngModel)]="id" class="form-control" [disabled]="idRecibido !== null" (input)="validateInput()">
     </div>
     <div class="form-group ml-3">
       <label for="nombre">Nombre</label>

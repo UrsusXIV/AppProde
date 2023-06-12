@@ -21,15 +21,22 @@ export class PaisesService {
   }
 
   postPaises(pais: Paises): Observable<Paises> {
-    return this.http.post<Paises>(this.url, pais); // Realiza una solicitud POST a la URL con el objeto país en el cuerpo
+    const requestBody = { idEquipo: pais.id, equipoNombre: pais.nombre };
+    return this.http.post<Paises>(this.url, requestBody); // Realiza una solicitud POST a la URL con el objeto país en el cuerpo
   }
-
+  
   putPaises(id: number, pais: Paises): Observable<Paises> {
-    return this.http.put<Paises>(this.url + `/${id}`, pais); // Realiza una solicitud PUT a la URL con el ID y el objeto país en el cuerpo
+    const requestBody = { idEquipo: pais.id, equipoNombre: pais.nombre };
+    return this.http.put<Paises>(this.url, requestBody);
   }
-
-  deletePaies(id: number) {
-    return this.http.delete(this.url + `/${id}`); // Realiza una solicitud DELETE a la URL con el ID
+  
+  deletePaies(id: number, nombreEquipo: string) {
+  
+    // Crea un objeto con el ID y el nombre del equipo
+    const requestBody = { idEquipo: id, equipoNombre: nombreEquipo };
+  
+    // Agrega el objeto como cuerpo de la solicitud DELETE utilizando la opción 'body'
+    return this.http.delete(this.url, { body: requestBody }); // Realiza una solicitud DELETE a la URL con el ID y el nombre del equipo en el cuerpo
   }
 }
 

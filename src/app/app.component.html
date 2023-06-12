@@ -7,7 +7,7 @@
   <!-- Fila con contenido centrado -->
   <div class="row text-center mt-4">    
     <div class="col">
-      <h2>CRUD Mundial</h2> <!-- Encabezado -->
+      <h2>CRUD Mundial V.0.1.1</h2> <!-- Encabezado -->
     </div>    
   </div>
 
@@ -16,7 +16,7 @@
     <div class="col-md-2">
       <label for="idPais" class="from-label">ID</label> <!-- Etiqueta para el campo de ID -->
       <input type="number" name="id" id="idPais" class="form-control" [(ngModel)]="pais.id"> <!-- Campo de entrada de ID con enlace de datos [(ngModel)] -->
-      <button class="btn btn-primary mt-2" (click)="buscarItem()">Buscar</button> <!-- Botón de búsqueda con evento click -->
+      <button class="btn btn-primary mt-2" (click)="buscarItem()"> Buscar  <i class="bi bi-search icon-padding"></i> </button> <!-- Botón de búsqueda con evento click -->
       <div *ngIf="elementoNoEncontrado" class="alert alert-danger mt-2">
         Elemento no encontrado en la lista. <!-- Div para mostrar un mensaje de alerta si el elemento no se encuentra -->
       </div>
@@ -30,11 +30,11 @@
   <!-- Fila con margen superior -->
   <div class="row-mt-5">    
     <div class="col">
-      <button class="btn btn-success" type="button" [routerLink]="['/detalle-abmpaises']" (click)="sonShow = true">Agregar</button> <!-- Botón de agregar -->
+      <button class="btn btn-success" type="button" [routerLink]="['/detalle-abmpaises']" (click)="sonShow = true; clearPostData()">Agregar <i class="bi bi-plus-circle-fill icon-padding"></i></button> <!-- Botón de agregar -->
 
-      <button class="btn btn-warning m-2" type="button" [routerLink]="['/detalle-abmpaises']" (click)="sonShow = true" [disabled]="isUpdateDisabled">Update</button> <!-- Botón de update -->
+      <button class="btn btn-warning m-2" type="button" [routerLink]="['/detalle-abmpaises']" (click)="sonShow = true; enableUpdateMode()" [disabled]="isUpdateDisabled">Update <i class="bi bi-pencil-fill icon-padding"></i></button> <!-- Botón de update -->
 
-      <button class="btn btn-danger" type="button" [disabled]="isDeleteDisabled">Eliminar</button> <!-- Botón de eliminar -->
+      <button class="btn btn-danger" type="button" (click)="borrarElemento()" [disabled]="isDeleteDisabled">Eliminar <i class="bi bi-trash3-fill icon-padding"></i></button> <!-- Botón de eliminar -->
     </div>
   </div>
 
@@ -54,7 +54,7 @@
           <!-- Bucle for para cada elemento de "datatable[0]" -->
           <tr *ngFor="let item of datatable[0]">
             <td>
-              <input type="checkbox" [(ngModel)]="item.seleccionado" (change)="selectItem(item)">
+              <input type="checkbox" [(ngModel)]="item.seleccionado" (change)="selectItemAndStoreID(item); selectItemAndStoreNombre(item)">
             </td>
             <td>{{item.idEquipo}}</td>
             <td>{{item.equipoNombre}}</td>

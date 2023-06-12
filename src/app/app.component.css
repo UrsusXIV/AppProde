@@ -73,3 +73,8 @@ body {
   .table tbody tr td input[type="button"]:focus {
     background-color: #666; /* Color de fondo del botón "Seleccionar" en el estado hover o focus */
   }
+
+  .icon-padding {
+    padding-left: 2px; /* Ajusta el valor según tu preferencia */
+  }
+  

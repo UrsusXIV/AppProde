@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DetalleABMPaisesComponent } from './detalle-abmpaises/detalle-abmpaises.component';
+import { ComunicationService } from './services/comunication.service';
+import { ShareddataService } from './services/shareddata.service';
 
 const routes: Routes = [
   { path: 'detalle-abmpaises', component: DetalleABMPaisesComponent }
@@ -22,7 +24,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],
-  providers: [],
+  providers: [ComunicationService, ShareddataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

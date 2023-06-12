@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ComunicationService {
+export class ComunicationService 
+{
   private cancelarSource = new BehaviorSubject<boolean>(false);
   cancelar$ = this.cancelarSource.asObservable();
 
